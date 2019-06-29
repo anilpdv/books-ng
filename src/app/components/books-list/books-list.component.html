@@ -1,0 +1,28 @@
+<div class="alert alert-danger" *ngIf="books.length < 2 && error">
+  <div class="alert-items">
+    <span class="alert-text">
+      {{ error }}
+    </span>
+  </div>
+</div>
+<div class="div-spinner" *ngIf="books.length < 1">
+  <span class="spinner spinner-lg">
+    Loading...
+  </span>
+</div>
+
+<div class="container">
+
+  <div class="clr-row" *ngIf="books.length > 1">
+    <div *ngFor="let book of books" class="clr-col-xl-3 clr-col-sm-4 clr-col-md-3 col-pad ">
+      <a [routerLink]="['/book', book.isbn.split(',')[0], book.id]" class="card clickable card-img">
+        <img [src]="'http://libgen.io/covers/' + book.coverurl" alt="" class="" />
+      </a>
+    </div>
+  </div>
+  <div class="button-center" *ngIf="showButton">
+    <button class="btn btn-outline button-more" (click)="loadmore($e)">
+      more
+    </button>
+  </div>
+</div>

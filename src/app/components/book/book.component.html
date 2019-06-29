@@ -1,0 +1,97 @@
+<div class="left-container" *ngIf="book">
+  <div class="card">
+    <div class="card-block">
+      <div class="alert alert-warning alert-sm" *ngIf="error">
+        <button type="button" class="close" aria-label="Close">
+          <clr-icon aria-hidden="true" shape="close"></clr-icon>
+        </button>
+        <div class="alert-item static">
+          <span class="alert-text"> Use small alerts in a card. </span>
+        </div>
+      </div>
+      <div class="card-media-block ">
+        <img
+          class="card-media-image"
+          [src]="'http://libgen.io/covers/' + book.coverurl"
+        />
+        <div class="card-media-description">
+          <h2 class="card-media-title">{{ book.title }}</h2>
+          <span class="card-text-author">
+            <span class="card-text-by">by </span> {{ book.author }}</span
+          >
+
+          <div class="meta-data">
+            <p-rating
+              [(ngModel)]="val"
+              [stars]="5"
+              [readonly]="readonly"
+              [cancel]="false"
+              class="ui-rating"
+            >
+            </p-rating>
+            <span class="rating-value">{{ val }} avg-rating</span>
+          </div>
+        </div>
+      </div>
+      <hr *ngIf="book.descr" />
+      <div [innerHTML]="book.descr" class="card-text"></div>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-outline">info</a>
+      <a class="btn btn-outline">download</a>
+    </div>
+  </div>
+  <div
+    *ngIf="contentString"
+    class="reviews"
+    [innerHTML]="contentString | keephtml"
+  ></div>
+  <div *ngIf="!contentString" class="warning-reviews">
+    <div class="alert alert-warning" role="alert">
+      <div class="alert-items">
+        <div class="alert-item static">
+          <div class="alert-icon-wrapper">
+            <clr-icon
+              class="alert-icon"
+              shape="exclamation-triangle"
+            ></clr-icon>
+          </div>
+          <span class="alert-text">Reviews not found</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="right-container" *ngIf="book">
+  <div class="quotes-heading">
+    <h2>Quotes</h2>
+    <hr />
+  </div>
+  <div *ngIf="!data">
+    <div class="alert alert-warning" role="alert">
+      <div class="alert-items">
+        <div class="alert-item static">
+          <div class="alert-icon-wrapper">
+            <clr-icon
+              class="alert-icon"
+              shape="exclamation-triangle"
+            ></clr-icon>
+          </div>
+          <span class="alert-text">Quotes not found</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quotes-list" *ngIf="data">
+    <div class="quote" *ngFor="let quote of data">
+      <p class="p-quote">
+        {{ quote.quote }} - <span class="quote-author">{{ quote.author }}</span>
+      </p>
+      <div class="icon-hr">
+        <clr-icon shape="ellipsis-horizontal" size="36"></clr-icon>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.clr-row {
+  display: flex;
+}
+
+.div-spinner {
+  position: absolute;
+}
+
+.spinner {
+  position: relative;
+  left: 440px;
+  top: 200px;
+}
+
+.col-pad {
+  padding: 20px;
+  display: flex;
+}
+
+.container {
+  margin: 40px;
+}
+
+.button-more {
+  margin: auto;
+}
+
+.button-center {
+  text-align: center;
+}
