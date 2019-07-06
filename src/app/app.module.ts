@@ -17,6 +17,8 @@ import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
 import { LatestBooksComponent } from './components/latest-books/latest-books.component';
 import { CarouselModule } from 'primeng/carousel';
+import { BooksSliderComponent } from './components/books-slider/books-slider.component';
+import { BooksShowCageComponent } from './components/books-show-cage/books-show-cage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { CarouselModule } from 'primeng/carousel';
     HeaderComponent,
     BookComponent,
     EscapeHtmlPipeComponent,
-    LatestBooksComponent
+    LatestBooksComponent,
+    BooksSliderComponent,
+    BooksShowCageComponent
   ],
   imports: [
     BrowserModule,

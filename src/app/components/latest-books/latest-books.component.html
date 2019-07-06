@@ -4,16 +4,16 @@
   </span>
 </div>
 
-<div class="container">
+<div class="Latest-books">
   <div class="clr-row" *ngIf="books.length > 1">
     <div *ngFor="let book of books" class="clr-col-xl-2 clr-col-sm-4 clr-col-md-3 col-pad ">
-      <a [routerLink]="['/book', book.isbn.split(',')[0], book.id]" class="card clickable card-img">
+      <a [routerLink]="['/book', book.isbn.split(',')[0], book.id]" class="card clickable card-img latest-card">
         <img [src]="'http://libgen.io/covers/' + book.coverurl" alt="" class="" />
       </a>
     </div>
   </div>
-  <div class="button-center" *ngIf="showButton">
-    <button class="btn btn-outline button-more" (click)="loadmore($e)">
+  <div class="button-center">
+    <button class="btn btn-outline button-more" *ngIf="books.length > 0" (click)="getmore($e)">
       more
     </button>
   </div>

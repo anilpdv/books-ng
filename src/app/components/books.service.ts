@@ -1,29 +1,33 @@
-import { Injectable } from "@angular/core";
-import { Book } from "./book.model";
-import { Subject } from "rxjs";
-import { HttpClient } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { Book } from './book.model';
+import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { NewBookData, LibgenBook } from './newBook.model';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class BooksService {
   constructor(private http: HttpClient) {}
-  private BaseUrl = "http://localhost:3000";
-  private subUrlBooks = "/api/books";
-  private subUrlBook = "/api/book";
+  // private BaseUrl =  'http://books-app-0396.appspot.com';
+  private BaseUrl = 'http://localhost:3000';
+  private subUrlBooks = '/api/books';
+  private subUrlBook = '/api/book';
 
   private books: Book[];
   private bookUpdate = new Subject<Book[]>();
 
   getBooks(query: string, page: number) {
-    return this.http.get<Book[]>(
+    return this.http.get<LibgenBook[]>(
       `${this.BaseUrl}${this.subUrlBooks}/search?q=${query}&page=${page}`
     );
   }
 
-  getLatest(from: string, to: string) {
+  getLatest(from: string, to: string, limit: number) {
     return this.http.get<Book[]>(
-      `${this.BaseUrl}${this.subUrlBooks}/latest?from=${from}&to=${to}`
+      `${this.BaseUrl}${
+        this.subUrlBooks
+      }/latest?from=${from}&to=${to}&limit=${limit}`
     );
   }
 
@@ -42,13 +46,13 @@ export class BooksService {
   }
 
   downloadBook(md5: string, title: string) {
-    const splitTitle = title.split(" ").join("-");
+    const splitTitle = title.split(' ').join('-');
     return this.http.get(
       `${this.BaseUrl}${this.subUrlBook}/${splitTitle}?md5=${md5}`
     );
   }
 
   getQuotesByTitle(title: string) {
-    return this.http.get<any>(`http://www.quotesapi.ml/search?q=${title}`);
+    return this.http.get<any>(`http://quotesapi.ml/search?q=${title}`);
   }
 }

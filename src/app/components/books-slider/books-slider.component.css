@@ -1,0 +1,26 @@
+.books-container {
+  display: flex;
+
+}
+
+.book-image {
+  margin: 20px;
+}
+
+.book-image .card {
+  transition: all 2s ease;
+}
+
+.book-image a {
+  opacity: 1;
+}
+
+.prev-button {
+  margin: auto 0px;
+  cursor: pointer;
+}
+
+.next-button {
+  margin: auto 0px;
+  cursor: pointer;
+}

@@ -1,4 +1,51 @@
 header {
-  background: #226597 !important;
+  background-color: white !important;
+  height: 70px;
+  justify-content: space-between;
+}
 
+
+
+.nav-link {
+  padding-left: 30px;
+  color: #34495e !important;
+}
+
+.title {
+  color: #34495e !important;
+  font-size: 1.5em !important;
+  font-weight: 800 !important;
+  font-family: Palanquin !important;
+}
+
+clr-icon {
+  font-size: 20px;
+  background: #eaeaea !important;
+}
+
+input {
+  width: 400px;
+  padding: 20px;
+  border: none;
+  background-color: #eaeaea !important;
+  border-radius: 40px;
+  margin-right: 150px;
+}
+
+
+
+@media (max-width:1020px) {
+  input {
+    width: 400px;
+    margin-left: 50px;
+    padding: 20px;
+  }
+}
+
+@media (max-width:700px) {
+  input {
+    width: 250px;
+    margin-left: 50px;
+    padding: 20px;
+  }
 }

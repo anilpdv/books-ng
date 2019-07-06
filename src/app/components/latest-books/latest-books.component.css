@@ -1,15 +1,22 @@
+.Latest-books {
+  margin: 30px;
+}
+
 .clr-row {
   display: flex;
 }
 
-.div-spinner {
-  position: absolute;
+
+
+.latest-card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+
 .spinner {
-  position: relative;
-  left: 440px;
-  top: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
 .col-pad {

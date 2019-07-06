@@ -1,3 +1,15 @@
 .side-bar {
-  background: #f3f9fb;
+  background: white;
+  border-right: 2px solid #eaeaea;
+}
+
+app-header {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.side-bar-link {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0px auto;
 }

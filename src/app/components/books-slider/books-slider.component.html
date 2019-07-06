@@ -1,0 +1,45 @@
+<div class="slider" *ngIf="books.length>1">
+  <div class="books-container">
+    <div class="prev-button">
+      <span class="prev-span" (click)="handlePrev($evt)">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 172 172"
+          style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#2ecc71">
+              <path
+                d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667zM107.5,121.83333h-21.5l-28.66667,-35.83333l28.66667,-35.83333h21.5l-28.66667,35.83333z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div class="book-image" *ngFor="let book of books.slice(start,end)">
+      <a [routerLink]="['/book',book.isbn.split(',')[0],book.id]" class="card clickable  books-shadow">
+        <img [src]="'http://libgen.io/covers/'+ book.coverurl" width="200" height="300" alt="" class="" />
+      </a>
+    </div>
+    <div class="next-button">
+      <span class="next-span" (click)="handleNext($evt)">
+
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 172 172"
+          style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#2ecc71">
+              <path
+                d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667zM78.83333,122.34217l-10.75,-10.75l25.59217,-25.59217l-25.59217,-25.59217l10.75,-10.75l36.34217,36.34217z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </span>
+
+    </div>
+  </div>
+</div>

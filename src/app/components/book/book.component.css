@@ -1,3 +1,7 @@
+.Book-container {
+  margin: 20px;
+}
+
 .card-media-block .card-media-image {
   display: inline-block;
   flex: 0 0 auto;
@@ -23,12 +27,10 @@ hr {
   margin: 25px;
   border: 0;
   height: 1px;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0));
 }
 
 .hr-top {
@@ -38,8 +40,8 @@ hr {
 .right-container {
   width: 40%;
   float: left;
-
-  padding: 20px 0;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 .p-quote {
@@ -52,13 +54,11 @@ hr {
   text-align: right;
   font-style: italic;
   font-family: Poppins;
-  color: #2c3e50;
+  color: #718096;
   font-weight: 500;
 }
 
-.quotes-heading {
-  text-align: center;
-}
+
 
 .quotes-list {
   padding-left: 30px;
@@ -66,22 +66,41 @@ hr {
 
 .card-media-title,
 h2 {
-  color: #2c3e50;
+  color: #4a5568;
   font-family: Palanquin, sans-serif;
-  font-weight: 600;
   text-transform: capitalize;
   font-size: 1.5rem;
 }
 
-.card-text,
+.quotes-heading h2 {
+  text-align: center;
+
+  color: #718096;
+}
+
 .p-quote {
-  text-align: left;
+  text-align: justify;
   letter-spacing: 0.05rem;
   line-height: 1.6rem;
   font-size: 14px;
-  color: #34495e;
+  color: #a0aec0;
   font-family: Poppins;
   word-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.card-text {
+
+  text-align: justify;
+  letter-spacing: 0.05rem;
+  line-height: 1.6rem;
+  font-size: 16px;
+  color: #718096;
+  font-family: Poppins;
+  word-spacing: 0.05em;
+
+  margin: 20px;
+  font-weight: 500;
 }
 
 .warning-reviews {
@@ -90,7 +109,8 @@ h2 {
 
 .icon-hr {
   text-align: center;
-  padding-bottom: 1rem;
+  color: #718096;
+  padding-top: 20px;
 }
 
 .card-media-title {
@@ -101,23 +121,26 @@ h2 {
 .card-text-author {
   margin-left: 10px;
   font-weight: 500;
-  padding: 5px 2px;
-  font-size: 15px;
-  color: #34495e;
-  font-family: Poppins;
+  padding: 10px 2px;
+  font-size: 18px;
+  letter-spacing: 0.05rem;
+  color: #718096;
+  font-family: Poppins, Poppins;
+
 }
+
 .card-text-by {
   padding-right: 5px;
 }
 
-h2 {
-  line-height: 1.8rem;
-}
+
 
 .meta-data {
   text-align: left;
   display: flex;
   margin-left: 10px;
+
+  padding-top: 14px;
 }
 
 .rating-value {

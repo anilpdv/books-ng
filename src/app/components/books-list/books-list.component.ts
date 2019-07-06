@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BooksService } from '../books.service';
 import { Book } from '../book.model';
 import { FormService } from '../form.service';
+import { NewBook, NewBookData, LibgenBook } from '../newBook.model';
 @Component({
   selector: 'app-books-list',
   templateUrl: './books-list.component.html',
@@ -12,7 +13,7 @@ export class BooksListComponent implements OnInit {
   query: string;
   page = 1;
   temporaryQuery: string;
-  books: Book[] = [];
+  books: LibgenBook[] = [];
   showButton = false;
   constructor(
     private booksService: BooksService,
@@ -53,10 +54,9 @@ export class BooksListComponent implements OnInit {
   loadmore(e) {
     this.page++;
     this.booksService.getBooks(this.temporaryQuery, this.page).subscribe(
-      (result: Book[]) => {
+      (result: LibgenBook[]) => {
         console.log(this.page);
         console.log(this.query);
-        console.log(this.temporaryQuery);
         console.log(result);
         this.books.push(...result);
       },
