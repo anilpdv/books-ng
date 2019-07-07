@@ -2,6 +2,15 @@
   display: flex;
 }
 
+.book-image {
+  background-position: center center;
+  width: 500px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 
 .spinner {
   position: absolute;
