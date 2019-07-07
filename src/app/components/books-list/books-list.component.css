@@ -2,14 +2,11 @@
   display: flex;
 }
 
-.div-spinner {
-  position: absolute;
-}
 
 .spinner {
-  position: relative;
-  left: 440px;
-  top: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
 .col-pad {

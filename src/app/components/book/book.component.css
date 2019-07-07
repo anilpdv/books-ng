@@ -52,10 +52,10 @@ hr {
 
 .quote-author {
   text-align: right;
-  font-style: italic;
-  font-family: Poppins;
+  font-family: Nunito;
   color: #718096;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 
@@ -67,40 +67,43 @@ hr {
 .card-media-title,
 h2 {
   color: #4a5568;
-  font-family: Palanquin, sans-serif;
+  font-family: 'Open Sans', Palanquin, sans-serif;
   text-transform: capitalize;
-  font-size: 1.5rem;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .quotes-heading h2 {
   text-align: center;
+  font-size: 24px;
 
-  color: #718096;
+  color: #4a5568;
 }
 
 .p-quote {
   text-align: justify;
   letter-spacing: 0.05rem;
-  line-height: 1.6rem;
-  font-size: 14px;
+  line-height: 1.5rem;
+  font-size: 16px;
   color: #a0aec0;
-  font-family: Poppins;
+  font-family: Nunito;
   word-spacing: 0.05em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
+/*#4a5568*/
 .card-text {
 
   text-align: justify;
   letter-spacing: 0.05rem;
-  line-height: 1.6rem;
+  line-height: 1.5rem;
   font-size: 16px;
   color: #718096;
-  font-family: Poppins;
+  font-family: Nunito;
   word-spacing: 0.05em;
 
   margin: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .warning-reviews {

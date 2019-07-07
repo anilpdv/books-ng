@@ -9,8 +9,8 @@ import { NewBookData, LibgenBook } from './newBook.model';
 })
 export class BooksService {
   constructor(private http: HttpClient) {}
-  // private BaseUrl =  'http://books-app-0396.appspot.com';
-  private BaseUrl = 'http://localhost:3000';
+  private BaseUrl = 'https://books-app-1519c.appspot.com';
+  // private BaseUrl = 'http://localhost:3000';
   private subUrlBooks = '/api/books';
   private subUrlBook = '/api/book';
 
