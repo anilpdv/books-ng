@@ -15,14 +15,9 @@
 
   <div class="clr-row" *ngIf="books.length > 1">
     <div *ngFor="let book of books" class="clr-col-xl-3 clr-col-sm-4 clr-col-md-3 col-pad ">
-      <div [routerLink]="['/book', book.isbn[0], book.id]"
-        [ngStyle]="{'background-image': 'url(' + book.bookImage+ ')' }" class="book-image books-shadow ">
-
-      </div>
-
-
-
-
+      <a [routerLink]="['/book', book.isbn[0], book.id]" class="card clickable card-img books-shadow">
+        <img [src]="book.bookImage" alt="" class="book-image" />
+      </a>
 
     </div>
   </div>
