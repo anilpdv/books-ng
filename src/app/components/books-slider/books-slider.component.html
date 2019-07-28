@@ -17,9 +17,11 @@
         </svg>
       </span>
     </div>
-    <div class="book-image" *ngFor="let book of books.slice(start,end)">
-      <a [routerLink]="['/book',book.isbn.split(',')[0],book.id]" class="card clickable  books-shadow">
-        <img [src]="'http://libgen.io/covers/'+ book.coverurl" width="200" height="300" alt="" class="" />
+    <div @imageSlider class="book-image" *ngFor="let book of books.slice(start,end)">
+      <a (mouseenter)="toggle(book.id)" (mouseleave)="toggle(book.id)"
+        [@BookFlip]="id === book.id && isHover ? 'hover':'leave'" [routerLink]="['/book',book.isbn[0],book.id]"
+        class="card clickable  book-shadow">
+        <img [src]="book.bookImage" width="200" height="300" alt="" class="slider-image" />
       </a>
     </div>
     <div class="next-button">

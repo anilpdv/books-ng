@@ -8,7 +8,7 @@
   <div class="clr-row" *ngIf="books.length > 1">
     <div *ngFor="let book of books" class="clr-col-xl-2 clr-col-sm-4 clr-col-md-3 col-pad ">
       <a [routerLink]="['/book', book.isbn.split(',')[0], book.id]" class="card clickable card-img latest-card">
-        <img [src]="'http://libgen.io/covers/' + book.coverurl" alt="" class="" />
+        <img [src]="'http://booksdescr.org/covers/' + book.coverurl" alt="" class="" />
       </a>
     </div>
   </div>

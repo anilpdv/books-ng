@@ -11,10 +11,20 @@ import { NewBook, LibgenBook } from '../newBook.model';
 export class BooksShowCageComponent implements OnInit {
   constructor(private booksService: BooksService) {}
   books: LibgenBook[] = [];
+  tolstoyBooks: LibgenBook[] = [];
   ngOnInit() {
     this.booksService.getBooks('philosophy', 1).subscribe(
       data => {
         this.books = data;
+        console.log('book show cage', data);
+      },
+      err => {
+        console.log(err);
+      }
+    );
+    this.booksService.getBooks('leo tolstoy', 1).subscribe(
+      data => {
+        this.tolstoyBooks = data;
         console.log('book show cage', data);
       },
       err => {
